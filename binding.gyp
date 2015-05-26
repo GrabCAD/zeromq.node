@@ -3,6 +3,7 @@
     {
       'target_name': 'zmq',
       'sources': [ 'binding.cc' ],
+      'win_delay_load_hook': 'true',
       'include_dirs' : [
         "<!(node -e \"require('nan')\")"
       ],
