@@ -44,6 +44,9 @@ if (targ === 'electron') {
 
     // Download the Electron specific header files [into <nodeGypHome>/0.25.3/].
     // This will also recompile node_modules/**/*.node files.
+    // Internally, "electron-rebuild" will do something like:
+    //      HOME=<nodeGypHome> node-gyp install --target=0.25.3 --arch=x64 --dist-url=https://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
+    //      npm rebuild --target=0.25.3 --arch=x64
     child_process.execSync('electron-rebuild -v ' + electronVer + ' -m .');
 
     // Compile zmq.node binary against just d/l header files.
