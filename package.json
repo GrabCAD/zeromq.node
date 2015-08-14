@@ -26,6 +26,7 @@
   "scripts": {
     "test": "make test",
     "install": "node --harmony prebuilt/install.js electron",
+    "install_iojs": "node --harmony prebuilt/install.js iojs",
     "stash_iojs": "node --harmony prebuilt/stash.js iojs",
     "stash_electron": "node --harmony prebuilt/stash.js electron",
     "clean": "node-gyp clean"
