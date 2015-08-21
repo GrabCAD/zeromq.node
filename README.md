@@ -4,6 +4,36 @@
 
   [ØMQ](http://www.zeromq.org/) bindings for node.js.
 
+## Eagle Notes
+
+Clarifications needed that are specific to Eagle.
+
+*	This repo is a fork of the original project.  Among the changes include:
+
+	*	Precompiled binaries [of `zmq.node`]
+	*	Force x64 binaries to be created when on Windows
+
+*	As of 8/2015, the NPM module's native library (i.e., `zmq.node`) is now precompiled.
+	If you want to force a recompile, run `npm run stash_electron` or `npm run stash_iojs`.
+	To take out the precompile step completely, drop the `scripts { install : ... }` entry from `package.json`.
+	NPM will call `node-gyp` automatically when it sees `bindings.gyp`.
+
+*	`zmq.node` is merely a bridge from Node to actual ZeroMQ library.  There are several ways to getting the actual ZeroMQ library.
+
+	*	On Windows, you don't need to do anything as it's already part of this repo (e.g., `windows/lib/x86/libzmq-v100-mt-3_2_2.dll` etc).
+		The original text (later in this doc) says `First make sure ZeroMQ is installed` but this has since been
+		[corrected on the original repo](https://github.com/JustinTulloss/zeromq.node/blob/094c29b184c91dea4147e0b1813610f4de76eb99/README.md#on-windows).
+	*	On Mac
+
+		1.	Install using Homebrew: `brew install homebrew/versions/zeromq`
+		2.	Let pkg-config know about the library: `export PKG_CONFIG_PATH=/usr/local/Cellar/zeromq/<VERSION>/lib/pkgconfig/`
+			where `<VERSION>` may be 4.0.4, 4.0.5_2, etc.
+			If you did this correctly, `pkg-config --cflags --libs libzmq` should work.
+		3.	Make sure pkg-config setup also applies to sudo context
+		
+			*	`sudo visudo`
+			*	Insert `Defaults env_keep += "PKG_CONFIG_PATH"`
+
 ## Installation
 
 First make sure [ZeroMQ is installed](http://www.zeromq.org/intro:get-the-software).
