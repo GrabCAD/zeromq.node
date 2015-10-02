@@ -25,9 +25,10 @@ Clarifications needed that are specific to Eagle.
 		[corrected on the original repo](https://github.com/JustinTulloss/zeromq.node/blob/094c29b184c91dea4147e0b1813610f4de76eb99/README.md#on-windows).
 	*	On Mac
 
-		1.	Install using Homebrew: `brew install homebrew/versions/zeromq`
+		1.	Install using Homebrew: `brew install zeromq`
+			Note: Avoid the formulas for: zeromq22, zeromq3, zeromq32
 		2.	Let pkg-config know about the library: `export PKG_CONFIG_PATH=/usr/local/Cellar/zeromq/<VERSION>/lib/pkgconfig/`
-			where `<VERSION>` may be 4.0.4, 4.0.5_2, etc.
+			where `<VERSION>` is 4.1.3, etc.
 			If you did this correctly, `pkg-config --cflags --libs libzmq` should work.
 		3.	Make sure pkg-config setup also applies to sudo context
 		
