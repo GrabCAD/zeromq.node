@@ -37,7 +37,7 @@ if (targ === 'electron') {
     // Electron executable.
 
     // Version of Electron for eagle-desktop
-    const electronVer = '0.34.3';
+    const electronVer = '0.35.3';
 
     // Where to put header files [instead of $HOME/.node-gyp/]
     const nodeGypHome = path.resolve(__dirname, '..', 'node_modules', 'electron-rebuild', 'lib', 'headers');
