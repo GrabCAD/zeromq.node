@@ -1,21 +1,21 @@
-cmd_Release/obj.target/zmq/binding.o := c++ '-DNODE_GYP_MODULE_NAME=zmq' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/howard/.node-gyp/4.2.2/include/node -I/Users/howard/.node-gyp/4.2.2/src -I/Users/howard/.node-gyp/4.2.2/deps/uv/include -I/Users/howard/.node-gyp/4.2.2/deps/v8/include -I../node_modules/nan -I/usr/local/Cellar/zeromq/4.1.3/include -I/opt/local/include -I/usr/local/include  -Os -gdwarf-2 -mmacosx-version-min=10.5 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/zmq/binding.o.d.raw  -c -o Release/obj.target/zmq/binding.o ../binding.cc
+cmd_Release/obj.target/zmq/binding.o := c++ '-DNODE_GYP_MODULE_NAME=zmq' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/howard/.node-gyp/6.1.0/include/node -I/Users/howard/.node-gyp/6.1.0/src -I/Users/howard/.node-gyp/6.1.0/deps/uv/include -I/Users/howard/.node-gyp/6.1.0/deps/v8/include -I../node_modules/nan -I/usr/local/Cellar/zeromq/4.1.3/include -I/opt/local/include -I/usr/local/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/zmq/binding.o.d.raw   -c -o Release/obj.target/zmq/binding.o ../binding.cc
 Release/obj.target/zmq/binding.o: ../binding.cc \
-  /Users/howard/.node-gyp/4.2.2/include/node/v8.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/v8-version.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/v8config.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/node.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/node_version.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/node_buffer.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/v8.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/v8-version.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/v8config.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/node.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/node_version.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/node_buffer.h \
   /usr/local/Cellar/zeromq/4.1.3/include/zmq.h \
   /usr/local/Cellar/zeromq/4.1.3/include/zmq_utils.h \
   ../node_modules/nan/nan.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/uv.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/uv-errno.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/uv-version.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/uv-unix.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/uv-threadpool.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/uv-darwin.h \
-  /Users/howard/.node-gyp/4.2.2/include/node/node_object_wrap.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/uv.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/uv-errno.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/uv-version.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/uv-unix.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/uv-threadpool.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/uv-darwin.h \
+  /Users/howard/.node-gyp/6.1.0/include/node/node_object_wrap.h \
   ../node_modules/nan/nan_callbacks.h \
   ../node_modules/nan/nan_callbacks_12_inl.h \
   ../node_modules/nan/nan_maybe_43_inl.h \
@@ -27,22 +27,22 @@ Release/obj.target/zmq/binding.o: ../binding.cc \
   ../node_modules/nan/nan_weak.h ../node_modules/nan/nan_object_wrap.h \
   ../node_modules/nan/nan_typedarray_contents.h
 ../binding.cc:
-/Users/howard/.node-gyp/4.2.2/include/node/v8.h:
-/Users/howard/.node-gyp/4.2.2/include/node/v8-version.h:
-/Users/howard/.node-gyp/4.2.2/include/node/v8config.h:
-/Users/howard/.node-gyp/4.2.2/include/node/node.h:
-/Users/howard/.node-gyp/4.2.2/include/node/node_version.h:
-/Users/howard/.node-gyp/4.2.2/include/node/node_buffer.h:
+/Users/howard/.node-gyp/6.1.0/include/node/v8.h:
+/Users/howard/.node-gyp/6.1.0/include/node/v8-version.h:
+/Users/howard/.node-gyp/6.1.0/include/node/v8config.h:
+/Users/howard/.node-gyp/6.1.0/include/node/node.h:
+/Users/howard/.node-gyp/6.1.0/include/node/node_version.h:
+/Users/howard/.node-gyp/6.1.0/include/node/node_buffer.h:
 /usr/local/Cellar/zeromq/4.1.3/include/zmq.h:
 /usr/local/Cellar/zeromq/4.1.3/include/zmq_utils.h:
 ../node_modules/nan/nan.h:
-/Users/howard/.node-gyp/4.2.2/include/node/uv.h:
-/Users/howard/.node-gyp/4.2.2/include/node/uv-errno.h:
-/Users/howard/.node-gyp/4.2.2/include/node/uv-version.h:
-/Users/howard/.node-gyp/4.2.2/include/node/uv-unix.h:
-/Users/howard/.node-gyp/4.2.2/include/node/uv-threadpool.h:
-/Users/howard/.node-gyp/4.2.2/include/node/uv-darwin.h:
-/Users/howard/.node-gyp/4.2.2/include/node/node_object_wrap.h:
+/Users/howard/.node-gyp/6.1.0/include/node/uv.h:
+/Users/howard/.node-gyp/6.1.0/include/node/uv-errno.h:
+/Users/howard/.node-gyp/6.1.0/include/node/uv-version.h:
+/Users/howard/.node-gyp/6.1.0/include/node/uv-unix.h:
+/Users/howard/.node-gyp/6.1.0/include/node/uv-threadpool.h:
+/Users/howard/.node-gyp/6.1.0/include/node/uv-darwin.h:
+/Users/howard/.node-gyp/6.1.0/include/node/node_object_wrap.h:
 ../node_modules/nan/nan_callbacks.h:
 ../node_modules/nan/nan_callbacks_12_inl.h:
 ../node_modules/nan/nan_maybe_43_inl.h:
