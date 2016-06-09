@@ -1,10 +1,43 @@
+2.15.3 / 2016-6-3
+=================
+
+  * 2.15.0 introduced a bug where request sockets could no longer batch up requests.
+    This release should fix that [ronkorving, jaleigh]
+
+2.15.2 / 2016-5-22
+==================
+
+  * 2.15.0 introduced a bug where some messages would not be received. This release
+    should fix that [ronkorving]
+
+2.15.1 / 2016-5-8
+=================
+
+  * Node.js 6 compatibility (NAN 2.3) [kkoopa]
+
+2.15.0 / 2016-4-27
+==================
+
+  * Dropped support for Node 0.8 [reqshark]
+  * Added unref/ref APIs to detach/attach sockets from/to the event loop [Joongi Kim]
+  * Improved message throughput 3-fold on ZMQ 4 [ronkorving]
+  * When bind or unbind failed, you could never try again (fixed) [ronkorving]
+  * Various travis configuration improvements [reqshark]
+  * Bumped NAN to 2.2.x [JanStevens]
+
+2.14.0 / 2015-11-20
+===================
+
+  * A socket.read() method was added to retrieve messages while paused [sshutovskyi]
+  * socket.send() now takes a callback as 3rd argument which is called once the message is sent [ronkorving]
+  * Now tested on Node.js 0.8, 0.10, 0.12, 4 and 5 [ronkorving]
+
 2.13.0 / 2015-08-26
 ===================
 
   * io.js 3.x compatible [kkoopa]
   * corrections to type casting operations [kkoopa]
   * "make clean" now also removes node_modules [reqshark]
-
 
 2.12.0 / 2015-07-10
 ===================
@@ -15,7 +48,6 @@
   * Test suite improvements [reqshark]
   * Updated the Windows bundle to ZeroMQ 4.0.4 [kkoopa]
   * License attribute added to package.json [pdehaan]
-
 
 2.11.1 / 2015-05-21
 ===================

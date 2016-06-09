@@ -29,7 +29,8 @@ describe('socket.push-pull', function(){
 
     var addr = "inproc://stuff";
 
-    pull.bind(addr, function(){
+    pull.bind(addr, function (error) {
+      if (error) throw error;
       push.connect(addr);
 
       push.send('foo');
@@ -56,7 +57,8 @@ describe('socket.push-pull', function(){
 
       var addr = "inproc://pause_stuff";
 
-      pull.bind(addr, function(){
+      pull.bind(addr, function (error) {
+        if (error) throw error;
         push.connect(addr);
 
         push.send('foo');
@@ -72,6 +74,33 @@ describe('socket.push-pull', function(){
       }, 100);
   });
 
+  it('should be able to read messages after pause()', function(done){
+      var push = zmq.socket('push')
+        , pull = zmq.socket('pull');
+
+      var addr = "inproc://pause_stuff";
+
+      var messages = ['bar', 'foo'];
+      pull.bind(addr, function (error) {
+        if (error) throw error;
+        push.connect(addr);
+
+        pull.pause()
+        messages.forEach(function(message){
+          push.send(message);
+        });
+
+        messages.forEach(function(message){
+          pull.read().toString().should.eql(message);
+        });
+      });
+
+      setTimeout(function (){
+        pull.close();
+        push.close();
+        done();
+      }, 100);
+  });
 
 
   it('should emit messages after resume()', function(done){
@@ -106,7 +135,8 @@ describe('socket.push-pull', function(){
 
     var addr = "inproc://resume_stuff";
 
-    pull.bind(addr, function(){
+    pull.bind(addr, function (error) {
+      if (error) throw error;
       push.connect(addr);
       pull.pause()
 
