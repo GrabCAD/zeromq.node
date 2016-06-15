@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/GrabCAD/zeromq.node.git"
   },
+  "author": "GrabCAD",
+  "publishConfig": {
+    "registry": "https://artifactory4.grabcad.net/artifactory/api/npm/npm-local/"
+  },  
   "dependencies": {
     "nan": "~2.1.0",
     "bindings": "~1.2.1",
